@@ -1,4 +1,10 @@
 ## 1. Introduccion
+Este repositorio contiene codigo en C para una aplicacion de chat basica usando sockets y multithreading para la materia de telematica, este proyecto es desarollado por:
+* Eduardo Piñeros
+* Juan Jose Restrepo
+* Julian Agudelo
+En este readme se puede encontrar un resumen de todo lo trabajado y aprendido en el desarrollo de esta aplicacion, todo lo que no sea explicado explicitamente en este readme tambien puede ser leido del codigo, el cual contiene comentarios de todo lo trabajado
+
 ## 2. Desarrollo
 Para el desarrollo tuvimos en cuenta los siguientes requisitios especificados en el backlog del proyecto
 * https://github.com/users/edup3/projects/6
