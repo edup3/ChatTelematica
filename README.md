@@ -44,7 +44,14 @@ A traves de todos los archivos definimos varias estructuras que nos ayudarian pa
         int connected_to;          // ID del cliente con el que está conectado (0 si no está en un chat)
     } Client;
 Tambien utilizamos programacion de hilos para manejar la concurrencia tanto del lado del servidor, como del lado del cliente. Para asegurarnos de evitar errores al tener varios hilos accediendo a las mismas variables usamos mutex.
-Del lado del servidor cada que se conecta un cliente se ejecuta una funcion handle_client() en un hilo nuevo que se encarga de manejar la conexion con cada cliente
+Del lado del servidor cada que se conecta un cliente se ejecuta una funcion handle_client() en un hilo nuevo que se encarga de manejar la conexion con cada cliente.
+
+    pthread_create(&thread_id, NULL, handle_client, (void*)new_client);
+
+    
+Y del lado del cliente utilizamos hilos para que el cliente pueda mandar mensaje a su vez que los recibe.
+
+    pthread_create(&receive_thread, NULL, receive_messages, (void*)client_protocol);
 
 
 
@@ -55,6 +62,8 @@ En este proyecto de chat en C utilizando sockets y TCP, se alcanzaron varios obj
 Sin embargo, quedaron algunos aspectos sin implementar o mejorar, como la finalización correcta de la conexión del servidor y un manejo más robusto de los errores de conexión, que no fueron abordados. Aunque el chat cumple con las funcionalidades básicas, estos puntos representan áreas que podrían mejorar la estabilidad y la gestión de eventos excepcionales en el sistema.
 
 ## 4. Conclusiones
+Este Proyecto nos permitio explorar a fondo la utilizacion de sockets y multithreading en C, asi como sus metodos y manejo de errores. Para el desarrollo de este proyecto tambien fue fundamental una buena planeacion antes de empezar a desarrollar,
+lo cual nos permitio hacernos una idea de la estructura y funcionamiento de la aplicacion.
 ## 5. Referencias
 * https://csperkins.org/teaching/2007-2008/networked-systems/lecture04.pdf
 * https://beej.us/guide/bgc/html/split/
