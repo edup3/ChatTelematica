@@ -49,6 +49,11 @@ Del lado del servidor cada que se conecta un cliente se ejecuta una funcion hand
 
 
 ## 3. Aspectos Logrados y No Logrados
+
+En este proyecto de chat en C utilizando sockets y TCP, se alcanzaron varios objetivos clave. El servidor y los clientes pueden conectarse y transmitir mensajes de manera confiable a través del protocolo TCP, priorizando la integridad y seguridad de los datos sobre la velocidad. Se implementó exitosamente la retransmisión de mensajes a múltiples clientes conectados, asegurando una comunicación fluida y concurrente. Además, el manejo básico de las conexiones entre el servidor y los clientes ha sido completado de manera satisfactoria, lo que permite una gestión estable del tráfico de mensajes.
+
+Sin embargo, quedaron algunos aspectos sin implementar o mejorar, como la finalización correcta de la conexión del servidor y un manejo más robusto de los errores de conexión, que no fueron abordados. Aunque el chat cumple con las funcionalidades básicas, estos puntos representan áreas que podrían mejorar la estabilidad y la gestión de eventos excepcionales en el sistema.
+
 ## 4. Conclusiones
 ## 5. Referencias
 * https://csperkins.org/teaching/2007-2008/networked-systems/lecture04.pdf
