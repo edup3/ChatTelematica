@@ -3,6 +3,7 @@ Este repositorio contiene codigo en C para una aplicacion de chat basica usando 
 * Eduardo Piñeros
 * Juan Jose Restrepo
 * Julian Agudelo
+
 En este readme se puede encontrar un resumen de todo lo trabajado y aprendido en el desarrollo de esta aplicacion, todo lo que no sea explicado explicitamente en este readme tambien puede ser leido del codigo, el cual contiene comentarios de todo lo trabajado
 
 ## 2. Desarrollo
