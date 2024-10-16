@@ -4,10 +4,14 @@ Para el desarrollo tuvimos en cuenta los siguientes requisitios especificados en
 * https://github.com/users/edup3/projects/6
 
 ### TCP o UDP  
-LLegamos a la conclusion de usar TCP para este proyecto, ya que al ser una app de mensajeria o chat deicidimos priorizar la calidad y seguridad de los datos antes que la velocidad. Podemos ver en la funcion protocol_init donde se especifica el uso de TCP.  
+Decidimos usar TCP en nuestra aplicación de chat porque ofrece una comunicación fiable y orientada a la conexión, lo cual es clave cuando se trata de transmitir mensajes de manera precisa y segura. TCP garantiza que los datos lleguen en orden y sin pérdidas, utilizando mecanismos como la retransmisión de paquetes en caso de error y el control de flujo para evitar la saturación de la red. Esto asegura que los mensajes enviados en el chat se reciban completos, sin errores ni desorden, manteniendo la integridad de la comunicación.
+
+Podemos ver cómo esto se refleja en el código cuando en la función protocol_init se especifica el uso de TCP de la siguiente manera:
 
     protocol->socket_fd = socket(AF_INET, SOCK_STREAM, 0);
 SOCK_STREAM define el uso de TCP, si quisieramos usar UDP tendriamos que usar SOCK_DGRAM
+
+Por otro lado, UDP, aunque es más rápido al no requerir la misma gestión de conexión que TCP, no garantiza la entrega ni el orden de los mensajes. En un chat, esto podría resultar en mensajes perdidos o desordenados, lo cual sería una experiencia negativa para los usuarios, ya que cada mensaje es importante para mantener una conversación coherente. Por eso, aunque TCP puede ser un poco más lento que UDP, la prioridad en este caso es garantizar una comunicación fiable, haciendo que TCP sea la mejor opción.
 ____
 ### Diagramas  
 Tambien nos guiamos de los siguientes diagramas para hacernos una idea de la estructura del proyecto y su flujo  
