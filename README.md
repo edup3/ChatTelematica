@@ -1,4 +1,5 @@
 ## 1. Introduccion
+Link video: https://youtu.be/EnIlUd5Doek
 Este repositorio contiene codigo en C para una aplicacion de chat basica usando sockets y multithreading para la materia de telematica, este proyecto es desarollado por:
 * Eduardo Piñeros
 * Juan Jose Restrepo
